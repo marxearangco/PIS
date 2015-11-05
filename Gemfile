@@ -5,7 +5,6 @@ group :production do
 	gem 'rails', '4.1.8'
 	gem 'rails_12factor'
 	gem 'puma'
-	# gem 'activerecord-jdbcpostgresql-adapter'
 end
 
 group :development do
@@ -13,8 +12,6 @@ group :development do
 	gem 'spring'
 end
 
-# gem 'rails', '4.0.5', group: :development
-# gem "mysql2", "~>0.3.18", :platforms => [:mswin, :mingw]
 gem 'activerecord-jdbcpostgresql-adapter'
 gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
