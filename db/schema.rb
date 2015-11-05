@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20151101130923) do
     t.datetime "updated_at"
   end
 
-  add_index "diagnoses", ["patient_id"], name: "index_diagnoses_on_post_id", using: :btree
+  add_index "diagnoses", ["patient_id"], name: "index_diagnoses_on_patient_id", using: :btree
   add_index "diagnoses", ["user_id"], name: "index_diagnoses_on_user_id", using: :btree
 
   create_table "information", force: true do |t|
@@ -77,11 +77,11 @@ ActiveRecord::Schema.define(version: 20151101130923) do
     t.integer  "patient_id"
     t.integer  "appointment_id"
     t.string   "bp"
-    t.decimal  "weight",         precision: 10, scale: 2
-    t.decimal  "height",         precision: 10, scale: 2
+    t.decimal  "weight"
+    t.decimal  "height"
     t.datetime "date_gathered"
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   add_index "statistics", ["appointment_id"], name: "index_statistics_on_appointment_id", unique: true, using: :btree
